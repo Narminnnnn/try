@@ -2124,6 +2124,27 @@ let users = [
 // 2) users arrayinde yasi 100 den yuxarilari versin eger yoxdursa error olaraq 
 // yasi 100 den yuxari olan istifadeci movcud deyil yazilsin ve error olsada
 // olmasada butun istifadecilerin yaslari logda gorsensin
+// muellim yazan usul
+// const usersAge = () => {
+//     try {
+//         let ageUser = users.filter(item => item.age > 100);
+//         if (ageUser.length == 0) {
+//             throw new Error("yasi 100 den yuxari olan istifadeci movcud deyil")
+//         }
+//         console.log("yasi 100den yuxari olan istirakcilar", ageUser);
+
+//     } catch (error) {
+//         console.error(error.message);
+
+//     }
+//     finally {
+//         let result = users.map(item => item.age);
+
+//         console.log("butun istifadecilerin yaslari", result);
+//     }
+// }
+// usersAge()
+
 
 
 // const usersAge =()=>{
@@ -2169,13 +2190,13 @@ let users = [
 
 // const findId=(id)=>{
 //     try {
-//        let person = users.find(item => item.id==id) 
+//        let person = users.find(item => item.id==id)
 //        if(!person ||!person.address){
 
 //            throw new Error(`id ${id} olan istifadecinin adress melumati yoxdur`)
 //        }console.log(`id ${id} olan istifadecinin adress melumatlar:`, person.address);
 
-//     } 
+//     }
 // catch (error) {
 //         console.error(error.message);
 //       }
